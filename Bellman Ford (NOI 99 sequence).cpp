@@ -1,6 +1,6 @@
-/*input
-6 1 2 3 1 1 2
-
+/*
+https://wcipeg.com/problem/noi99p1
+The solution is a modification of the standard Bellman Ford algorithm. 
 */
 #include<bits/stdc++.h>
 using namespace std;
