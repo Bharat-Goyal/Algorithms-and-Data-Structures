@@ -1,0 +1,22 @@
+//https://leetcode.com/problems/zigzag-conversion/description/
+class Solution {
+public:
+    string convert(string s, int numRows) {
+        if(numRows == 1) return s;
+        vector<char> vals[numRows];
+        int curRow=0, add=1;
+        for(int i=0;i<s.size();i++) {
+            vals[curRow].push_back(s[i]);
+            curRow += add;
+            if(curRow >=numRows || curRow<0) {
+                add*=-1;
+                curRow +=2*add;
+            }
+        }
+        string ret ="";
+        for(int i=0;i<numRows;i++) {
+            for(auto j:vals[i]) ret.push_back(j);
+        } 
+        return ret;
+    }
+};
